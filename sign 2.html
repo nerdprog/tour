@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-repeat: no-repeat;           
+            background-image: url(https://cdn.kimkim.com/files/a/content_articles/featured_photos/c98b4f78c783b7dfb3bcc0909eae68a3f7045dc3/big-2de252e5e986a8325d120c2dc98de268.jpg);
+        }
+        
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: medium;
+        }
+
+        .button button:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.8em;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .password-caption {
+            font-size: 0.8em;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .password-toggle {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .password-toggle input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .password-toggle label {
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+   <div class="box">
+       <img src="https://i.postimg.cc/k56qb9D8/web.png" alt="Web">
+       <form onsubmit="return validateForm()">
+           <input type="text" id="name" placeholder="Enter your name">
+           <div id="name-error" class="error-message"></div>
+           <input type="email" id="email" placeholder="Enter your email">
+           <div id="email-error" class="error-message"></div>
+           <div class="password-toggle">
+               <input type="password" id="password" placeholder="Enter your password">
+               <input type="checkbox" id="show-password" onchange="togglePasswordVisibility()">
+               <label for="show-password">Show Password</label>
+           </div>
+           <div id="password-error" class="error-message"></div>
+           <div class="password-caption">Password must contain at least 8 characters including at least one uppercase letter and one special character.</div>
+           <div class="button">
+               <button type="submit">Sign up</button>
+           </div>
+       </form>
+   </div>
+
+   <script src="sjs.js">
+       
+   </script>
+</body>
+</html>
